@@ -156,6 +156,13 @@ msgstr "{0} TB"
 msgid "{0}, paused until you turn it on"
 msgstr "{0}，开启前保持暂停"
 
+#. placeholder {0}: dayLabel(point.date)
+#. placeholder {1}: number(point.totalTokens)
+#. placeholder {2}: cost(point.costUsd)
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "{0}: {1} tokens, {2}"
+msgstr ""
+
 #. placeholder {0}: Math.round(used)
 #: apps/web/src/components/billing/PlanUsage.tsx
 msgid "{0}% used"
@@ -347,12 +354,6 @@ msgstr "{count} 小时前"
 #: apps/mobile/lib/inbox/activity.ts
 msgid "{count}m ago"
 msgstr "{count} 分钟前"
-
-#. placeholder {0}: number(point.totalTokens)
-#. placeholder {1}: cost(point.costUsd)
-#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
-msgid "{day}: {0} tokens, {1}"
-msgstr "{day}：{0} 个 token，{1}"
 
 #: apps/mobile/app/paywall.tsx
 msgid "{days} days free"
@@ -1702,6 +1703,11 @@ msgstr "下次启动时生效。"
 msgid "Apply"
 msgstr "应用"
 
+#: apps/mobile/lib/cards/ask-action-label.ts
+#: apps/web/src/components/messages/AskCard.tsx
+msgid "Apply now"
+msgstr ""
+
 #: apps/web/src/components/teach/SkillDraftCard.tsx
 msgid "Approval boundaries"
 msgstr "审批边界"
@@ -2208,6 +2214,10 @@ msgstr "内置"
 #: apps/web/src/components/messages/AskCard.tsx
 msgid "Button “{button}” · read from the page, not checked"
 msgstr "按钮“{button}”· 读取自页面，未核实"
+
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Cached"
+msgstr ""
 
 #: apps/web/src/pages/shell/meetings/meeting-calendar.tsx
 msgid "Calendar options"
@@ -5174,6 +5184,7 @@ msgstr "已禁用例行任务“{name}”"
 #: apps/mobile/app/(settings)/memory-note.tsx
 #: apps/mobile/components/cards/OutgoingDraftCard.tsx
 #: apps/web/src/components/messages/OutgoingDraftCard.tsx
+#: apps/web/src/pages/routines/RoutineEditor.tsx
 msgid "Discard"
 msgstr "放弃"
 
@@ -5184,6 +5195,10 @@ msgstr "要放弃更改吗？"
 #: apps/web/src/pages/shell/composer/hold-to-talk.tsx
 msgid "Discard recording"
 msgstr "丢弃录音"
+
+#: apps/web/src/pages/routines/RoutineEditor.tsx
+msgid "Discard unsaved changes?"
+msgstr ""
 
 #: apps/mobile/components/cards/OutgoingDraftCard.tsx
 #: apps/web/src/components/messages/OutgoingDraftCard.tsx
@@ -6889,6 +6904,10 @@ msgstr "正在加载记忆设置…"
 msgid "Loading model catalog…"
 msgstr "正在加载模型目录…"
 
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Loading model name…"
+msgstr ""
+
 #: apps/web/src/components/pages/PageNotice.tsx
 msgid "Loading page…"
 msgstr "正在加载页面…"
@@ -7388,6 +7407,10 @@ msgstr "模型"
 #: apps/web/src/pages/onboarding/model-step.tsx
 msgid "Model id"
 msgstr "模型 ID"
+
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Model name unavailable"
+msgstr ""
 
 #: apps/web/src/components/models/FoundModelPicker.tsx
 #: apps/web/src/pages/model-settings/role-model-picker.tsx
@@ -9451,6 +9474,7 @@ msgstr "续费日期"
 msgid "Renews {day}"
 msgstr "将于 {day} 续订"
 
+#: apps/mobile/components/bots/bot-context-cards.tsx
 #: apps/mobile/lib/pages/page-review-comments.tsx
 #: apps/web/src/components/pages/PageReviewComments.tsx
 #: apps/web/src/pages/space/ScratchpadSection.tsx
@@ -12127,6 +12151,10 @@ msgstr "单位"
 msgid "Unlink"
 msgstr "取消关联"
 
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Unlisted model"
+msgstr ""
+
 #: apps/mobile/components/calls/CallCard.tsx
 #: apps/web/src/components/call/CallCard.tsx
 msgid "Unmute"
@@ -13058,6 +13086,11 @@ msgstr "试用将结束，今天将从你的卡中扣款。"
 #: apps/web/src/pages/shell/composer/composer-error.tsx
 msgid "Your trial's computer hours are used up."
 msgstr "试用期的电脑时长已用完。"
+
+#. js-lingui-explicit-id
+#: packages/i18n/src/vault.ts
+msgid "Your Vault is full. Remove items you no longer need, then try again."
+msgstr ""
 
 #: apps/mobile/lib/api/user-error.ts
 #: apps/web/src/lib/query/user-error.ts

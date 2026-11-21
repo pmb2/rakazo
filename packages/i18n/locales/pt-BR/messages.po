@@ -156,6 +156,13 @@ msgstr "{0} TB"
 msgid "{0}, paused until you turn it on"
 msgstr "{0}, pausada até você ativá-la"
 
+#. placeholder {0}: dayLabel(point.date)
+#. placeholder {1}: number(point.totalTokens)
+#. placeholder {2}: cost(point.costUsd)
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "{0}: {1} tokens, {2}"
+msgstr ""
+
 #. placeholder {0}: Math.round(used)
 #: apps/web/src/components/billing/PlanUsage.tsx
 msgid "{0}% used"
@@ -347,12 +354,6 @@ msgstr "há {count} h"
 #: apps/mobile/lib/inbox/activity.ts
 msgid "{count}m ago"
 msgstr "há {count} min"
-
-#. placeholder {0}: number(point.totalTokens)
-#. placeholder {1}: cost(point.costUsd)
-#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
-msgid "{day}: {0} tokens, {1}"
-msgstr "{day}: {0} tokens, {1}"
 
 #: apps/mobile/app/paywall.tsx
 msgid "{days} days free"
@@ -1702,6 +1703,11 @@ msgstr "Vale a partir da próxima inicialização."
 msgid "Apply"
 msgstr "Aplicar"
 
+#: apps/mobile/lib/cards/ask-action-label.ts
+#: apps/web/src/components/messages/AskCard.tsx
+msgid "Apply now"
+msgstr ""
+
 #: apps/web/src/components/teach/SkillDraftCard.tsx
 msgid "Approval boundaries"
 msgstr "Limites de aprovação"
@@ -2208,6 +2214,10 @@ msgstr "Integrado"
 #: apps/web/src/components/messages/AskCard.tsx
 msgid "Button “{button}” · read from the page, not checked"
 msgstr "Botão “{button}” · lido da página, não verificado"
+
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Cached"
+msgstr ""
 
 #: apps/web/src/pages/shell/meetings/meeting-calendar.tsx
 msgid "Calendar options"
@@ -5174,6 +5184,7 @@ msgstr "Rotina \"{name}\" desativada"
 #: apps/mobile/app/(settings)/memory-note.tsx
 #: apps/mobile/components/cards/OutgoingDraftCard.tsx
 #: apps/web/src/components/messages/OutgoingDraftCard.tsx
+#: apps/web/src/pages/routines/RoutineEditor.tsx
 msgid "Discard"
 msgstr "Descartar"
 
@@ -5184,6 +5195,10 @@ msgstr "Descartar alterações?"
 #: apps/web/src/pages/shell/composer/hold-to-talk.tsx
 msgid "Discard recording"
 msgstr "Descartar gravação"
+
+#: apps/web/src/pages/routines/RoutineEditor.tsx
+msgid "Discard unsaved changes?"
+msgstr ""
 
 #: apps/mobile/components/cards/OutgoingDraftCard.tsx
 #: apps/web/src/components/messages/OutgoingDraftCard.tsx
@@ -6889,6 +6904,10 @@ msgstr "Carregando configurações de memória..."
 msgid "Loading model catalog…"
 msgstr "Carregando catálogo de modelos..."
 
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Loading model name…"
+msgstr ""
+
 #: apps/web/src/components/pages/PageNotice.tsx
 msgid "Loading page…"
 msgstr "Carregando página…"
@@ -7388,6 +7407,10 @@ msgstr "Modelo"
 #: apps/web/src/pages/onboarding/model-step.tsx
 msgid "Model id"
 msgstr "ID do modelo"
+
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Model name unavailable"
+msgstr ""
 
 #: apps/web/src/components/models/FoundModelPicker.tsx
 #: apps/web/src/pages/model-settings/role-model-picker.tsx
@@ -9451,6 +9474,7 @@ msgstr "Renova"
 msgid "Renews {day}"
 msgstr "Renova em {day}"
 
+#: apps/mobile/components/bots/bot-context-cards.tsx
 #: apps/mobile/lib/pages/page-review-comments.tsx
 #: apps/web/src/components/pages/PageReviewComments.tsx
 #: apps/web/src/pages/space/ScratchpadSection.tsx
@@ -12127,6 +12151,10 @@ msgstr "Unidade"
 msgid "Unlink"
 msgstr "Desvincular"
 
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Unlisted model"
+msgstr ""
+
 #: apps/mobile/components/calls/CallCard.tsx
 #: apps/web/src/components/call/CallCard.tsx
 msgid "Unmute"
@@ -13058,6 +13086,11 @@ msgstr "Seu teste termina e seu cartão será cobrado hoje."
 #: apps/web/src/pages/shell/composer/composer-error.tsx
 msgid "Your trial's computer hours are used up."
 msgstr "As horas de computador do seu teste acabaram."
+
+#. js-lingui-explicit-id
+#: packages/i18n/src/vault.ts
+msgid "Your Vault is full. Remove items you no longer need, then try again."
+msgstr ""
 
 #: apps/mobile/lib/api/user-error.ts
 #: apps/web/src/lib/query/user-error.ts

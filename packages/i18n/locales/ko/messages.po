@@ -156,6 +156,13 @@ msgstr "{0} TB"
 msgid "{0}, paused until you turn it on"
 msgstr "{0}, 직접 켤 때까지 일시 중지됨"
 
+#. placeholder {0}: dayLabel(point.date)
+#. placeholder {1}: number(point.totalTokens)
+#. placeholder {2}: cost(point.costUsd)
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "{0}: {1} tokens, {2}"
+msgstr ""
+
 #. placeholder {0}: Math.round(used)
 #: apps/web/src/components/billing/PlanUsage.tsx
 msgid "{0}% used"
@@ -347,12 +354,6 @@ msgstr "{count}시간 전"
 #: apps/mobile/lib/inbox/activity.ts
 msgid "{count}m ago"
 msgstr "{count}분 전"
-
-#. placeholder {0}: number(point.totalTokens)
-#. placeholder {1}: cost(point.costUsd)
-#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
-msgid "{day}: {0} tokens, {1}"
-msgstr "{day}: 토큰 {0}개, {1}"
 
 #: apps/mobile/app/paywall.tsx
 msgid "{days} days free"
@@ -1702,6 +1703,11 @@ msgstr "다음 시작 시 적용됩니다."
 msgid "Apply"
 msgstr "적용"
 
+#: apps/mobile/lib/cards/ask-action-label.ts
+#: apps/web/src/components/messages/AskCard.tsx
+msgid "Apply now"
+msgstr ""
+
 #: apps/web/src/components/teach/SkillDraftCard.tsx
 msgid "Approval boundaries"
 msgstr "승인이 필요한 범위"
@@ -2208,6 +2214,10 @@ msgstr "기본 제공"
 #: apps/web/src/components/messages/AskCard.tsx
 msgid "Button “{button}” · read from the page, not checked"
 msgstr "버튼 “{button}” · 페이지에서 읽음, 확인 안 됨"
+
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Cached"
+msgstr ""
 
 #: apps/web/src/pages/shell/meetings/meeting-calendar.tsx
 msgid "Calendar options"
@@ -5174,6 +5184,7 @@ msgstr "\"{name}\" 자동 실행을 비활성화했습니다"
 #: apps/mobile/app/(settings)/memory-note.tsx
 #: apps/mobile/components/cards/OutgoingDraftCard.tsx
 #: apps/web/src/components/messages/OutgoingDraftCard.tsx
+#: apps/web/src/pages/routines/RoutineEditor.tsx
 msgid "Discard"
 msgstr "버리기"
 
@@ -5184,6 +5195,10 @@ msgstr "변경 사항을 버릴까요?"
 #: apps/web/src/pages/shell/composer/hold-to-talk.tsx
 msgid "Discard recording"
 msgstr "녹음 삭제"
+
+#: apps/web/src/pages/routines/RoutineEditor.tsx
+msgid "Discard unsaved changes?"
+msgstr ""
 
 #: apps/mobile/components/cards/OutgoingDraftCard.tsx
 #: apps/web/src/components/messages/OutgoingDraftCard.tsx
@@ -6889,6 +6904,10 @@ msgstr "기억 설정을 불러오는 중…"
 msgid "Loading model catalog…"
 msgstr "모델 목록을 불러오는 중…"
 
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Loading model name…"
+msgstr ""
+
 #: apps/web/src/components/pages/PageNotice.tsx
 msgid "Loading page…"
 msgstr "페이지 불러오는 중…"
@@ -7388,6 +7407,10 @@ msgstr "모델"
 #: apps/web/src/pages/onboarding/model-step.tsx
 msgid "Model id"
 msgstr "모델 ID"
+
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Model name unavailable"
+msgstr ""
 
 #: apps/web/src/components/models/FoundModelPicker.tsx
 #: apps/web/src/pages/model-settings/role-model-picker.tsx
@@ -9451,6 +9474,7 @@ msgstr "갱신일"
 msgid "Renews {day}"
 msgstr "{day}에 갱신"
 
+#: apps/mobile/components/bots/bot-context-cards.tsx
 #: apps/mobile/lib/pages/page-review-comments.tsx
 #: apps/web/src/components/pages/PageReviewComments.tsx
 #: apps/web/src/pages/space/ScratchpadSection.tsx
@@ -12127,6 +12151,10 @@ msgstr "단위"
 msgid "Unlink"
 msgstr "연결 해제"
 
+#: apps/web/src/pages/settings/UsageSettingsPanel.tsx
+msgid "Unlisted model"
+msgstr ""
+
 #: apps/mobile/components/calls/CallCard.tsx
 #: apps/web/src/components/call/CallCard.tsx
 msgid "Unmute"
@@ -13058,6 +13086,11 @@ msgstr "체험이 종료되고 오늘 카드로 결제됩니다."
 #: apps/web/src/pages/shell/composer/composer-error.tsx
 msgid "Your trial's computer hours are used up."
 msgstr "체험판 컴퓨터 시간을 모두 사용했습니다."
+
+#. js-lingui-explicit-id
+#: packages/i18n/src/vault.ts
+msgid "Your Vault is full. Remove items you no longer need, then try again."
+msgstr ""
 
 #: apps/mobile/lib/api/user-error.ts
 #: apps/web/src/lib/query/user-error.ts
