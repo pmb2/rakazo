@@ -85,6 +85,7 @@ export * from "./spaces/space.js";
 export * from "./text/link-label.js";
 export * from "./text/markdown-text.js";
 export * from "./text/trim-chars.js";
+export * from "./threads/a2ui.js";
 export * from "./threads/attachments.js";
 export * from "./threads/events.js";
 export * from "./threads/external-conversations.js";

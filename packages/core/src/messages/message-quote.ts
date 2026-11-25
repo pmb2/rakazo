@@ -1,5 +1,10 @@
 import type { MessageBlock, ReplyPreview } from "@rakazo/contracts";
-import { droppedTableHtmlText, linkLabel, truncateReplyQuote } from "@rakazo/contracts";
+import {
+  chatSurfaceLayout,
+  droppedTableHtmlText,
+  linkLabel,
+  truncateReplyQuote,
+} from "@rakazo/contracts";
 import { toText } from "hast-util-to-text";
 import { toHast } from "mdast-util-to-hast";
 import remarkGfm from "remark-gfm";
@@ -204,6 +209,10 @@ function replyBlockText(block: MessageBlock): string {
       return block.name;
     case "app":
       return block.server;
+    case "a2ui":
+      return chatSurfaceLayout(block.surface)
+        .items.map((item) => item.text)
+        .join(" | ");
     case "tool_question":
       return block.question.source;
     case "import_setup":

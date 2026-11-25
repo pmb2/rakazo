@@ -47,6 +47,7 @@ import { botDisplayName, speakerColorFor } from "../../lib/thread/thread-message
 import { AppConnectCard } from "../cards/AppConnectCard";
 import { AskActions } from "../cards/AskActions";
 import { AskReceiptView } from "../cards/ask-receipt";
+import { ChatSurfaceCard } from "../cards/ChatSurfaceCard";
 import { ChoiceCard } from "../cards/ChoiceCard";
 import { ComputerCard } from "../cards/ComputerCard";
 import { ChangeUndo, isUndoableChange } from "../cards/change-undo";
@@ -152,6 +153,7 @@ function MessageBubbleWithMentions({
 function isOwnCardBlock(block: MessageBlock): boolean {
   return (
     isSpecialMessageBlock(block) ||
+    block.kind === "a2ui" ||
     block.kind === "page" ||
     block.kind === "app" ||
     block.kind === "tool_question"
@@ -173,6 +175,8 @@ function MessageBubbleBody(props: ComponentProps<typeof MessageBubbleContent>) {
   const firstContent = pieces.findIndex(pieceShowsSender);
   const content = pieces.map((blocks, index) => {
     const first = blocks[0]!;
+    if (first.kind === "a2ui")
+      return <ChatSurfaceCard key={`surface-${index}`} surface={first.surface} />;
     if (first.kind === "page")
       return <PageCard key={`page-${index}`} block={first} messageId={message.id} />;
     if (first.kind === "tool_question")

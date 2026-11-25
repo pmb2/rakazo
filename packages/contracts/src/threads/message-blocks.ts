@@ -11,6 +11,7 @@ import { McpTransportSchema } from "../integrations/mcp.js";
 import { McpAppCspSchema } from "../integrations/mcp-app.js";
 import { OutgoingDraft } from "../integrations/outgoing-draft.js";
 import { ToolQuestionSchema } from "../integrations/tool-question.js";
+import { ChatSurface } from "./a2ui.js";
 
 export const MessageRole = z.enum(["user", "bot", "system"]);
 export const BotMessageIntent = z.enum(["request", "result", "question", "status", "fyi"]);
@@ -124,6 +125,11 @@ export const MessageBlock = z.discriminatedUnion("kind", [
   z.object({
     kind: z.literal("card"),
     lines: z.array(z.object({ k: z.string(), v: z.string() })),
+  }),
+  z.object({
+    /** A surface the bot showed in chat through show_chat_surface. */
+    kind: z.literal("a2ui"),
+    surface: ChatSurface,
   }),
   z.object({
     kind: z.literal("ask"),

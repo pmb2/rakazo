@@ -3,6 +3,7 @@ import {
   BOT_MEMORY_MAX_BYTES,
   BotSecretName,
   botSecretDestinationSchema,
+  ChatSurface,
   GenerateSecretInput,
   LOGIN_FIELD_LIMIT,
   MEMORY_INDEX_PATH,
@@ -229,6 +230,12 @@ export const conversationTools: ConnectorTool[] = [
         },
       },
     },
+  },
+  {
+    name: "show_chat_surface",
+    description:
+      "Show a comparison or an ordered set of steps as one card in this chat. Use it when grouped items read better than prose; otherwise reply normally, and do not repeat a surface in prose. Send one createSurface: a root Row for options or Column for steps, and one to eight Text components the root references exactly once, in display order.",
+    inputSchema: z.toJSONSchema(ChatSurface, { io: "input" }),
   },
   {
     name: "save_page",

@@ -1,5 +1,5 @@
 import type { MessageBlock } from "@rakazo/contracts";
-import { PAGE_TITLE_MAX_LENGTH, PageTitleSchema } from "@rakazo/contracts";
+import { ChatSurface, PAGE_TITLE_MAX_LENGTH, PageTitleSchema } from "@rakazo/contracts";
 import { CARD_TITLE_ESCAPED_CHARACTERS, containsSecret, redactSecrets } from "@rakazo/core";
 import { isUniqueViolation, signalPage, signalPageUsers } from "@rakazo/db";
 import { bestEffort } from "@rakazo/logging";
@@ -362,6 +362,12 @@ async function savePage(ctx: RunContext, call: ToolCall) {
 class PageChangedError extends Error {}
 
 export const pageTools: ToolHandlers = {
+  async show_chat_surface({ deps, run }, call) {
+    const parsed = ChatSurface.safeParse(call.args);
+    if (!parsed.success) return call.finish({ error: parsed.error.message });
+    await publishMessage(deps, run, "bot", [{ kind: "a2ui", surface: parsed.data }]);
+    return call.finish({ shown: true });
+  },
   async save_page(ctx, call) {
     return call.finish(await savePage(ctx, call));
   },

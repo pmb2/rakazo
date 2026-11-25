@@ -9,6 +9,7 @@ import type {
   MessageReaction,
   ThreadMessage,
 } from "@rakazo/contracts";
+import { chatSurfaceLayout } from "@rakazo/contracts";
 import type { ChildBotBlock, PeerExchange } from "@rakazo/core";
 import { isPeerReceiptBlocks, isToolActivityBlock, otherAuthor } from "@rakazo/core";
 import { BotAvatar, Button, cn, resolvePersonaColorDef } from "@rakazo/ui-web";
@@ -647,6 +648,30 @@ export const MessageView = memo(function MessageView({
                   ) : null}
                 </div>
                 {i === hoverAnchorIndex ? hoverActions : null}
+              </div>
+            );
+          }
+          if (block.kind === "a2ui") {
+            const { horizontal, items } = chatSurfaceLayout(block.surface);
+            // A row fills as many columns as the chat column fits, and stacks past that.
+            return (
+              <div
+                key={i}
+                className={`grid w-full min-w-0 gap-2 ${
+                  horizontal
+                    ? "grid-cols-[repeat(auto-fit,minmax(min(100%,14rem),1fr))]"
+                    : "grid-cols-1"
+                }`}
+              >
+                {items.map((item) => (
+                  <p
+                    dir="auto"
+                    key={item.id}
+                    className="min-w-0 whitespace-pre-wrap rounded-2xl bg-muted px-4 py-3 text-body-lg text-foreground [overflow-wrap:anywhere]"
+                  >
+                    {item.text}
+                  </p>
+                ))}
               </div>
             );
           }
